@@ -23,13 +23,13 @@ app.use(methodOverride('_method'));
 app.engine('handlebars', exphbs({defaultLayout: 'default'}));
 app.set('view engine', 'handlebars');
 //database connection
-/*database.sequelize.authenticate()
+database.sequelize.authenticate()
 .then(() => {
   console.log('Connection has been established successfully.');
 })
 .catch(err => {
   console.error('Unable to connect to the database:', err);
-});*/
+});
 // require Routes
 require("./routes/routes");
 
@@ -37,5 +37,5 @@ require("./routes/routes");
 var server = app.listen(3000, function () {
   var host = server.address().address
   var port = server.address().port
-  console.log("Hi ! the server is running on port "+port);
+  console.log("Hi ! the server is running on port "+ port);
 })
