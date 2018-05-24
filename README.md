@@ -1,8 +1,8 @@
 ### URL ###
 
-* express : [https://expressjs.com/](www.expressjs.com)
-* sequelizejs : [http://docs.sequelizejs.com/](www.sequelizejs.com)
-* Vuejs : [https://vuejs.org/](www.vuejs.org)
+* express : [www.expressjs.com](https://expressjs.com/)
+* sequelizejs : [www.sequelizejs.com](http://docs.sequelizejs.com/)
+* Vuejs : [www.vuejs.org](https://vuejs.org/)
 
 ##### Credentials for .env
 
