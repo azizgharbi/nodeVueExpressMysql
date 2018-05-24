@@ -15,7 +15,9 @@ Vue.use(Vuex);
       } , 
       getters: { // like computed methode
 
-      }, 
+      },
+      actions:{ // make call from api
+
+      }
       
-     
 })
