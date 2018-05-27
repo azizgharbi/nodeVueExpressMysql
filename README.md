@@ -16,3 +16,13 @@
 
 * Quick starter kit to start a vue node express project
 * Version 0.3
+
+## dev tricks
+
+* install nodemon in global
+
+```
+By default, nodemon looks for files with the .js, .coffee, .litcoffee, and .json extensions. If you use the --exec option and monitor  app.py nodemon will monitor files with the extension of .py. However, you can specify your own list with the -e (or --ext) switch like so:  
+
+nodemon -e js,jade Now nodemon will restart on any changes to files in the directory (or subdirectories) with the extensions .js, .jade. 
+```
