@@ -8,7 +8,9 @@
 <body>
 
     <div class="container">
-      {{{body}}}
+        <div id="app">
+            {% block content %}{% endblock %}
+        </div>
     </div>
     <script src="/static/js/dist/bundle.js"></script>
 </body>

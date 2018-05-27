@@ -19,7 +19,6 @@
     "body-parser": "^1.15.1",
     "css-loader": "^0.28.7",
     "express": "^4.13.4",
-    "express-handlebars": "^3.0.0",
     "file-loader": "^1.1.5",
     "method-override": "^2.3.6",
     "node-sass": "^4.5.3",
@@ -39,8 +38,10 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "buefy": "^0.6.5",
     "express-session": "^1.15.6",
     "mysql2": "^1.5.2",
-    "sequelize": "^4.37.8"
+    "sequelize": "^4.37.8",
+    "swig": "^1.4.2"
   }
 }

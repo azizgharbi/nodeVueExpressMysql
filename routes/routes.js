@@ -3,7 +3,12 @@ var UserController = require('../controller/UserController');
 
 
 app.get('/',HomeController.index);
-app.post('/login',UserController.login);
+
+
+
+//auth routes
+app.get('/login',UserController.login);
+app.post('/loginAction',UserController.loginAction);
 app.get('/logout',UserController.logout);
 
 

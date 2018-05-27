@@ -1,12 +1,12 @@
-var path = require('path');
-var express= require('express');
+var path = require("path");
+var express= require("express");
 app=express();
 
 // packge imported
-var bodyParser = require('body-parser');
-var methodOverride = require('method-override');
-var exphbs  = require('express-handlebars');
-var database = require('./database/config');
+var swig = require("swig");
+var bodyParser = require("body-parser");
+var methodOverride = require("method-override");
+var database = require("./database/config");
 
 
 //============================================
@@ -19,9 +19,16 @@ app.use('/static', express.static('public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
-// set engine handlebars
-app.engine('handlebars', exphbs({defaultLayout: 'default'}));
-app.set('view engine', 'handlebars');
+
+// set engine swig
+app.engine('html', swig.renderFile);
+
+app.set('view engine', 'html');
+app.set('views', __dirname + '/views');
+
+app.set('view cache', false);
+swig.setDefaults({ cache: false });
+
 //database connection
 database.sequelize.authenticate()
 .then(() => {
