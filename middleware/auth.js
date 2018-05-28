@@ -8,7 +8,7 @@ app.use(session({
 
 // auth middleware function
 var auth = function(req, res, next) {
-    if (req.session && req.session.user === "amy" && req.session.admin)
+    if (req.session && req.session.email)
       return next();
     else
       return res.sendStatus(401);

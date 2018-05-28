@@ -14,7 +14,7 @@
  
 ### What is this repository for? ###
 
-* Quick starter kit to start a vue node express project
+* Quick starter kit to start a vue node express project + basic auth
 * Version 0.3
 
 ## dev tricks

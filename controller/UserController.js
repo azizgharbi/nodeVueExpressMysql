@@ -12,13 +12,14 @@ module.exports = {
      },
 
     loginAction:function(req,res){
-        Model.User.findAll({
-          where: {
-            id: req.params.id
+          if (!req.body.email || !req.body.password) {
+            res.send('login failed');    
+          } else if(req.body.email === "aziz@gmail.com" && req.body.password === "aziz") {
+            req.session.email = req.body.email;
+            req.session.admin = true;
+            console.log(req.session.email);
+            res.send("login success!");
           }
-        }).then(card =>{
-            res.json(card);
-          });
      },
 
      logout:function(req,res){
