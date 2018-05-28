@@ -3,9 +3,6 @@ var UserController = require('../controller/UserController');
 
 
 app.get('/',HomeController.index);
-app.get('/createUser',UserController.createUser);
-
-
 
 //auth routes
 app.get('/login',UserController.login);

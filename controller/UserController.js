@@ -1,5 +1,5 @@
 
-var User = require('./../models/user');
+var Model = require('./../models/user');
 
 module.exports = {
 
@@ -8,23 +8,23 @@ module.exports = {
         res.render('home')
     },
 
-    createUser(req,res){
-        console.log(User);
-    },
-
     login:function(req,res){
         res.render('auth/login')
      },
 
     loginAction:function(req,res){
-          if (!req.body.email || !req.body.password) {
-            res.send('login failed');    
-          } else if(req.body.email === "aziz@gmail.com" && req.body.password === "aziz") {
-            req.session.email = req.body.email;
-            req.session.admin = true;
-            console.log(req.session.email);
+        Model.User.findAll({
+            where: {
+              email: req.body.email,
+              password : req.body.password
+            }
+        }).then(User =>{
+            req.session.user = User;
+            console.log(req.session.user);
             res.send("login success!");
-          }
+        }).catch(error => {
+            res.send('login failed');    
+        });
      },
 
      logout:function(req,res){
