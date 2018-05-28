@@ -11,6 +11,15 @@
 * DB_USER= user name
 * DB_PASS= user password
 * DB_CONNECTION=mysql
+
+### Migrations cmd
+
+* node_modules/.bin/sequelize model:generate --name User --attributes name:string,email:string,password:string
+* node_modules/.bin/sequelize db:migrate
+* node_modules/.bin/sequelize db:migrate:undo
+* node_modules/.bin/sequelize seed:generate --name demo-user
+* for more details migrations doc for squelizejs : [Migrations doc](http://docs.sequelizejs.com/manual/tutorial/migrations.html)
+
  
 ### What is this repository for? ###
 

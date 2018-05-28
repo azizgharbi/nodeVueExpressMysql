@@ -3,6 +3,7 @@ var UserController = require('../controller/UserController');
 
 
 app.get('/',HomeController.index);
+app.get('/createUser',UserController.createUser);
 
 
 

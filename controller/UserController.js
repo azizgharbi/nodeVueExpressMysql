@@ -1,10 +1,27 @@
-var Model = require("./../models/User");
+var User = require("./../models/user");
 
 module.exports = {
 
 
     index:function(req,res){
         res.render('home')
+    },
+
+    createUser(){
+
+        User.create(
+        { 
+            name: "aziz",
+            email: "aziz@gmail.com",
+            password : "aziz"
+        }, 
+        { 
+            fields: ['name', 'email','password'] 
+        }
+    ).then(card => {
+      res.redirect('/');
+    });
+    
     },
 
     login:function(req,res){
