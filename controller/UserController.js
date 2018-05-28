@@ -1,4 +1,4 @@
-var Model = require("./../models/user");
+var User = require("./../models/user");
 
 module.exports = {
 
@@ -8,20 +8,7 @@ module.exports = {
     },
 
     createUser(req,res){
-
-        Model.User.create(
-        { 
-            name: "aziz",
-            email: "aziz@gmail.com",
-            password : "aziz"
-        }, 
-        { 
-            fields: ['name', 'email','password'] 
-        }
-    ).then(card => {
-      res.redirect('/');
-    });
-    
+        
     },
 
     login:function(req,res){

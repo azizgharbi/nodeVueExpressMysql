@@ -1,12 +1,12 @@
-var database = require('./../database/config');
-
-
-var User = database.sequelize.define('User', {
-    name: database.Sequelize.STRING,
-    email: database.Sequelize.STRING,
-    password: database.Sequelize.STRING
+'use strict';
+module.exports = (sequelize, DataTypes) => {
+  var User = sequelize.define('User', {
+    name: DataTypes.STRING,
+    email: DataTypes.STRING,
+    password: DataTypes.STRING
   }, {});
   User.associate = function(models) {
     // associations can be defined here
   };
-  exports.User = User ;
+  return User;
+};
