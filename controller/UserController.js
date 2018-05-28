@@ -1,4 +1,4 @@
-var User = require("./../models/user");
+var Model = require("./../models/user");
 
 module.exports = {
 
@@ -7,9 +7,9 @@ module.exports = {
         res.render('home')
     },
 
-    createUser(){
+    createUser(req,res){
 
-        User.create(
+        Model.User.create(
         { 
             name: "aziz",
             email: "aziz@gmail.com",
