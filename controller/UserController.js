@@ -1,4 +1,5 @@
-var User = require("./../models/user");
+
+var User = require('./../models/user');
 
 module.exports = {
 
@@ -8,7 +9,7 @@ module.exports = {
     },
 
     createUser(req,res){
-        
+        console.log(User);
     },
 
     login:function(req,res){
