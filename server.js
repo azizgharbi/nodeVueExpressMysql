@@ -1,5 +1,6 @@
 var path = require("path");
 var express= require("express");
+var session = require('express-session');
 app=express();
 
 // packge imported
@@ -12,7 +13,12 @@ var database = require("./database/config");
 //============================================
         /* Let's the game begin */
 //============================================
-
+// session 
+app.use(session({
+  secret: 'tXLpM9Ukf9',
+  resave: true,
+  saveUninitialized: true
+}));
 // assets in the public folder
 app.use('/static', express.static('public'));
 //body-parser
