@@ -18,6 +18,7 @@
 * node_modules/.bin/sequelize db:migrate
 * node_modules/.bin/sequelize db:migrate:undo
 * node_modules/.bin/sequelize seed:generate --name demo-user
+* node_modules/.bin/sequelize db:seed:undo:all
 * migrations doc for more details : [Migrations doc](http://docs.sequelizejs.com/manual/tutorial/migrations.html)
 
  
